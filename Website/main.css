@@ -1,10 +1,57 @@
+body {
+    font-family: "Oxygen";
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("../fonts/Oxygen-Regular.ttf");
+}
+
 .flex-container {
     display: flex;
+    flex-direction: column;
+}
+
+.big-news { /*vertical align is a shitshow, make container flexbox and use align-items instead */
+    /* text-align will not work if we treat this as a flexbox */
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 4em;
+    justify-content: center;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.web-title {
+    font-size: 4em;
+    padding-bottom: 20px;
+}
+
+.g-item1 {
+    display: flex;
     background-color: #f1f1f1;
+    padding: 2%;
   }
   
-.flex-container > div {
+.g-item1 > div {
     width: 33%;
     text-align: center;
-    height: 40em;
+}
+
+.list-title {
+    font-size: 3em;
+}
+
+.list-container > li {
+    font-size: 1em;
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+    .g-item > div {
+        width: 33%;
+    }
 }
